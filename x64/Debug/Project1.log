@@ -1,0 +1,6 @@
+﻿  contact.c
+C:\Users\Effor\Desktop\contact\Project1\contact.c(37,10): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 4 拥有了类型“int *”
+C:\Users\Effor\Desktop\contact\Project1\contact.c(37,10): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 4 冲突
+  test.c
+  正在生成代码...
+  Project1.vcxproj -> C:\Users\Effor\Desktop\contact\Project1\x64\Debug\Project1.exe
