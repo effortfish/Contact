@@ -33,6 +33,7 @@ int main()
 			showContact(&con);
 			break;
 		case MODIFY:
+			ModifyContact(&con);
 			break;
 		case EXIT:
 			break;
