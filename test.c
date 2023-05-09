@@ -23,17 +23,18 @@ int main()
 		scanf("%d", &input);
 		switch (input)
 		{
-		case 1:
+		case ADD:
 			AddContact(&con);
 			break;
-		case 2:
+		case DEL:
+			DeleContact(&con);
 			break;
-		case 3:
+		case SHOW:
 			showContact(&con);
 			break;
-		case 4:
+		case MODIFY:
 			break;
-		case 0:
+		case EXIT:
 			break;
 		default:
 			printf("Input error, please re-enter\n");
