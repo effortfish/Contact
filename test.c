@@ -13,7 +13,7 @@ int main()
 {
 	int input;
 	//创建通讯录
-	struct Contact con;
+	Contact con;
 	//初始化通讯录
 	InitContact(&con);
 	do

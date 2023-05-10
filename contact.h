@@ -6,6 +6,7 @@
 #define MAX_SEX 6
 #define MAX_TELE 12
 #define MAX_ADDR 20
+#define DEFAULT_SIZE 3
 
 enum Option
 {
@@ -18,18 +19,19 @@ enum Option
 	SORT
 };
 
-struct PeoInfo {
+typedef struct PeoInfo {
 	char name[MAX_NAME];
 	int age;
 	char sex[MAX_SEX];
 	char tele[MAX_TELE];
 	char addr[MAX_ADDR];
-};
+}PeoInfo;
 
-struct Contact {
-	struct PeoInfo data[1000];
+typedef struct Contact {
+	PeoInfo* data;
 	int size;
-};
+	int capacity;
+}Contact;
 
 void InitContact(struct Contact* ps);
 void AddContact(struct Contact* ps);

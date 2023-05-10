@@ -1,37 +1,51 @@
 #include "contact.h"
 
-void InitContact(struct Contact* ps)
+void checkCapacity(Contact* ps)
 {
-	memset(ps->data, 0, sizeof(ps->data));
-	ps->size = 0;
+	if (ps->size == ps->capacity)
+	{
+		PeoInfo* ptr = realloc(ps->data, (ps->capacity + 2) * sizeof(PeoInfo));
+		if (ptr != NULL)
+		{
+			ps->data = ptr;
+			ps->capacity = ps->capacity + 2;
+			printf("succeful\n");
+		}
+	}
 }
 
-void AddContact(struct Contact* ps)
+void InitContact(Contact* ps)
 {
-	if (ps->size == 1000)
+	ps->data = (PeoInfo*)malloc(sizeof(PeoInfo) * DEFAULT_SIZE);
+	if (ps->data != NULL)
 	{
-		printf("The space is full\n");
-	}
-	else
-	{
-		printf("Please enter your name:>\n");
-		scanf("%s", ps->data[ps->size].name);
-		getchar();
-		printf("Please enter your age:>\n");
-		scanf("%d", &(ps->data[ps->size].age));
-		getchar();
-		printf("Please enter your sex:>\n");
-		scanf("%s", ps->data[ps->size].sex);
-		getchar();
-		printf("Please enter your telephone:>\n");
-		scanf("%ld", ps->data[ps->size].tele);
-		getchar();
-		printf("Please enter your address:>\n");
-		scanf("%s", ps->data[ps->size].addr);
-
-		ps->size++;
 		printf("succeful\n");
 	}
+	ps->size = 0;
+	ps->capacity = DEFAULT_SIZE;
+}
+
+void AddContact(Contact* ps)
+{
+	checkCapacity(ps);
+
+	printf("Please enter your name:>\n");
+	scanf_s("%s", ps->data[ps->size].name, MAX_NAME);
+	getchar();
+	printf("Please enter your age:>\n");
+	scanf("%d", &(ps->data[ps->size].age));
+	getchar();
+	printf("Please enter your sex:>\n");
+	scanf("%s", ps->data[ps->size].sex);
+	getchar();
+	printf("Please enter your telephone:>\n");
+	scanf("%ld", ps->data[ps->size].tele);
+	getchar();
+	printf("Please enter your address:>\n");
+	scanf("%s", ps->data[ps->size].addr);
+
+	ps->size++;
+	printf("succeful\n");
 }
 
 void showContact(const struct Contact* ps)

@@ -1,7 +1,9 @@
 ﻿  contact.c
-C:\Users\Effor\Desktop\contact\Project1\contact.c(27,9): warning C4477: “scanf”: 格式字符串“%ld”需要类型“long *”的参数，但可变参数 1 拥有了类型“char *”
-C:\Users\Effor\Desktop\contact\Project1\contact.c(27,9): message : 请考虑在格式字符串中使用“%hhd”
-C:\Users\Effor\Desktop\contact\Project1\contact.c(121,29): warning C4133: “函数”: 从“int [20]”到“const char *”的类型不兼容
-  test.c
-  正在生成代码...
+C:\Users\Effor\Desktop\contact\Project1\contact.c(7,18): warning C4013: “realloc”未定义；假设外部返回 int
+C:\Users\Effor\Desktop\contact\Project1\contact.c(7,12): warning C4047: “初始化”:“PeoInfo *”与“int”的间接级别不同
+C:\Users\Effor\Desktop\contact\Project1\contact.c(19,23): warning C4013: “malloc”未定义；假设外部返回 int
+C:\Users\Effor\Desktop\contact\Project1\contact.c(19,61): warning C4312: “类型强制转换”: 从“int”转换到更大的“PeoInfo *”
+C:\Users\Effor\Desktop\contact\Project1\contact.c(42,8): warning C4477: “scanf”: 格式字符串“%ld”需要类型“long *”的参数，但可变参数 1 拥有了类型“char *”
+C:\Users\Effor\Desktop\contact\Project1\contact.c(42,8): message : 请考虑在格式字符串中使用“%hhd”
+C:\Users\Effor\Desktop\contact\Project1\contact.c(135,29): warning C4133: “函数”: 从“int [20]”到“const char *”的类型不兼容
   Project1.vcxproj -> C:\Users\Effor\Desktop\contact\Project1\x64\Debug\Project1.exe
